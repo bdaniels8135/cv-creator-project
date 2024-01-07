@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LabeledTextInput from "./LabeledTextInput";
-import AutoResizingTextarea from "./AutoResizingTextarea";
+import LabeledAutoResizingTextarea from "./LabeledAutoResizingTextarea";
 
 function PersonalInfoSection() {
   const [personalInfo, setPersonalInfo] = useState({});
@@ -33,28 +33,29 @@ function PersonalInfoSection() {
       <LabeledTextInput
         labelText="First Name"
         id="first-name-input"
-        defaultValue={personalInfo.firstName || ""}
+        defaultValue={personalInfo.firstName}
         placeholder="John"
       />
 
       <LabeledTextInput
         labelText="Last Name"
         id="last-name-input"
-        defaultValue={personalInfo.lastName || ""}
+        defaultValue={personalInfo.lastName}
         placeholder="Doe"
       />
 
       <LabeledTextInput
         labelText="Job Title"
         id="job-title-input"
-        defaultValue={personalInfo.jobTitle || ""}
+        defaultValue={personalInfo.jobTitle}
         placeholder="Frontend Web Developer"
       />
 
-      <AutoResizingTextarea
+      <LabeledAutoResizingTextarea
+        labelText="Summary"
         id="summary-input"
-        placeholder="Write a short summary of yourself."
         defaultValue={personalInfo.summary}
+        placeholder="Write a short summary of yourself."
       />
 
       <button
