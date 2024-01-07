@@ -1,7 +1,7 @@
 import React from "react";
 
 function LabeledInput(props) {
-  const { labelText, id, type, value, placeholder, onChange } = props;
+  const { labelText, id, type, defaultValue, placeholder } = props;
   return (
     <label className="input-label-container" htmlFor={id}>
       <span className="input-label-text">{labelText}:</span>
@@ -9,9 +9,8 @@ function LabeledInput(props) {
         className={`${type}-input`}
         id={id}
         type={type}
-        value={value}
+        defaultValue={defaultValue}
         placeholder={placeholder}
-        onChange={onChange}
       />
     </label>
   );
