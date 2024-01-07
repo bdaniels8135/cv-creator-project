@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 
-function ResizingTextarea(props) {
+function AutoResizingTextarea(props) {
   const [height, setHeight] = useState(1);
-  const { id, placeholder } = props;
+  const { id, placeholder, defaultValue } = props;
 
   return (
     <textarea
       id={id}
       rows={height}
       placeholder={placeholder}
+      defaultValue={defaultValue}
       className="resizing-textarea"
       onChange={(e) => {
         if (e.target.clientHeight < e.target.scrollHeight)
@@ -19,4 +20,4 @@ function ResizingTextarea(props) {
   );
 }
 
-export default ResizingTextarea;
+export default AutoResizingTextarea;
