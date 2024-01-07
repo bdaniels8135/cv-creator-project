@@ -1,0 +1,24 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.app-header-nav .button-list {
+  display: flex;
+}
+
+.app-header .button-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.app-header button {
+  padding: .25rem .5rem;
+}
