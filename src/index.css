@@ -3,5 +3,10 @@
   margin: 0;
   font-size: 1rem;
   box-sizing: border-box;
-  border: 1px dashed red;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 1px dashed red; */
+}
+
+body {
+  padding: 1rem;
 }

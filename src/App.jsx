@@ -1,32 +1,21 @@
 import React from "react";
-import PageHeader from "./PageHeader";
+import AppHeader from "./AppHeader";
 import PersonalInfoSection from "./PersonalInfoSection";
 import ContactInfoSection from "./ContactInfoSection";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <PageHeader />
+      <AppHeader />
       <main>
         <PersonalInfoSection />
 
         <ContactInfoSection />
 
-        <section>
-          <form action="">
-            <legend>Education</legend>
-          </form>
-        </section>
-        <section>
-          <form action="">
-            <legend>Experience</legend>
-          </form>
-        </section>
-        <section>
-          <form action="">
-            <legend>Skill Lists</legend>
-          </form>
-        </section>
+        <section>Education</section>
+        <section>Experience</section>
+        <section>Skill Lists</section>
       </main>
       <aside>Preview of CV</aside>
     </>
