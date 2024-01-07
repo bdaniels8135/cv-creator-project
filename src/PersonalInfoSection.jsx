@@ -11,10 +11,14 @@ function PersonalInfoSection() {
       <section id="personal-info-container">
         <h2 className="section-heading"> Personal Info </h2>
         <p className="data-display">
-          Name: {`${personalInfo.firstName} ${personalInfo.lastName}`}
+          <b>Name:</b> {`${personalInfo.firstName} ${personalInfo.lastName}`}
         </p>
-        <p className="data-display">Job Title: {personalInfo.jobTitle}</p>
-        <p className="data-display">Summary: {personalInfo.summary}</p>
+        <p className="data-display">
+          <b>Job Title:</b> {personalInfo.jobTitle}
+        </p>
+        <p className="data-display">
+          <b>Summary:</b> {personalInfo.summary}
+        </p>
         <button
           className="edit-btn"
           type="button"
