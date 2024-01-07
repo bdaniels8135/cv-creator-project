@@ -8,14 +8,20 @@ function ContactInfoSection() {
   if (status === "saved")
     return (
       <section id="contact-info-container">
-        <h2 className="section-heading"> Contact Info </h2>
-        <p className="data-display">Location: {contactInfo.location}</p>
-        <p className="data-display">Phone: {contactInfo.phone}</p>
+        <h2 className="section-heading">Contact Info</h2>
         <p className="data-display">
-          Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+          <b>Location:</b> {contactInfo.location}
         </p>
         <p className="data-display">
-          Website: <a href={contactInfo.website}>{contactInfo.website}</a>
+          <b>Phone:</b> {contactInfo.phone}
+        </p>
+        <p className="data-display">
+          <b>Email:</b>
+          <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+        </p>
+        <p className="data-display">
+          <b>Website:</b>
+          <a href={contactInfo.website}>{contactInfo.website}</a>
         </p>
         <button
           className="edit-btn"

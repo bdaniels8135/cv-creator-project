@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
 function LabeledAutoResizingTextarea(props) {
-  const [height, setHeight] = useState(1);
+  const [height, setHeight] = useState(2);
   const { id, placeholder, defaultValue, labelText } = props;
 
   return (
     <label htmlFor={id} className="input-container">
-      <span className="input-label-text">{labelText}:</span>
+      <span className="input-label-text">
+        <b>{labelText}:</b>
+      </span>
       <textarea
         id={id}
         rows={height}
