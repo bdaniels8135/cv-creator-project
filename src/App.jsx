@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "./PageHeader";
 import PersonalInfoSection from "./PersonalInfoSection";
+import ContactInfoSection from "./ContactInfoSection";
 
 function App() {
   return (
@@ -9,11 +10,8 @@ function App() {
       <main>
         <PersonalInfoSection />
 
-        <section>
-          <form action="">
-            <legend>Contact Info</legend>
-          </form>
-        </section>
+        <ContactInfoSection />
+
         <section>
           <form action="">
             <legend>Education</legend>

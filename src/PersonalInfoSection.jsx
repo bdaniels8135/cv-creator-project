@@ -8,7 +8,7 @@ function PersonalInfoSection() {
 
   if (status === "saved")
     return (
-      <section id="personal-info-display">
+      <section id="personal-info-container">
         <h2 className="section-heading"> Personal Info </h2>
         <p className="data-display">
           Name: {`${personalInfo.firstName} ${personalInfo.lastName}`}
