@@ -10,15 +10,24 @@ function PersonalInfoSection() {
     return (
       <section id="personal-info-container">
         <h2 className="section-heading"> Personal Info </h2>
-        <p className="data-display">
-          <b>Name:</b> {`${personalInfo.firstName} ${personalInfo.lastName}`}
+
+        <p className="data-label">
+          <b>Name:</b>
         </p>
-        <p className="data-display">
-          <b>Job Title:</b> {personalInfo.jobTitle}
+        <p className="data-text">
+          {`${personalInfo.firstName} ${personalInfo.lastName}`}
         </p>
-        <p className="data-display">
-          <b>Summary:</b> {personalInfo.summary}
+
+        <p className="data-label">
+          <b>Job Title:</b>
         </p>
+        <p className="data-text">{personalInfo.jobTitle}</p>
+
+        <p className="data-label">
+          <b>Summary:</b>
+        </p>
+        <p className="data-text">{personalInfo.summary}</p>
+
         <button
           className="edit-btn"
           type="button"
@@ -34,11 +43,13 @@ function PersonalInfoSection() {
   return (
     <form id="personal-info-form">
       <h2 className="section-heading">Personal Info</h2>
+
       <LabeledTextInput
         labelText="First Name"
         id="first-name-input"
         defaultValue={personalInfo.firstName}
         placeholder="John"
+        autocomplete="given-name"
       />
 
       <LabeledTextInput
@@ -46,6 +57,7 @@ function PersonalInfoSection() {
         id="last-name-input"
         defaultValue={personalInfo.lastName}
         placeholder="Doe"
+        autocomplete="family-name"
       />
 
       <LabeledTextInput
@@ -53,6 +65,7 @@ function PersonalInfoSection() {
         id="job-title-input"
         defaultValue={personalInfo.jobTitle}
         placeholder="Frontend Web Developer"
+        autocomplete="organization-title"
       />
 
       <LabeledAutoResizingTextarea

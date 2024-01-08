@@ -5,10 +5,11 @@ function LabeledAutoResizingTextarea(props) {
   const { id, placeholder, defaultValue, labelText } = props;
 
   return (
-    <label htmlFor={id} className="input-container">
-      <span className="input-label-text">
+    <>
+      <label htmlFor={id} className="input-label">
         <b>{labelText}:</b>
-      </span>
+      </label>
+
       <textarea
         id={id}
         rows={height}
@@ -21,7 +22,7 @@ function LabeledAutoResizingTextarea(props) {
         }}
         style={{ resize: "none" }}
       />
-    </label>
+    </>
   );
 }
 

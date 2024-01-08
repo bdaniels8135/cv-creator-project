@@ -9,20 +9,31 @@ function ContactInfoSection() {
     return (
       <section id="contact-info-container">
         <h2 className="section-heading">Contact Info</h2>
-        <p className="data-display">
-          <b>Location:</b> {contactInfo.location}
+
+        <p className="data-label">
+          <b>Location:</b>
         </p>
-        <p className="data-display">
-          <b>Phone:</b> {contactInfo.phone}
+        <p className="data-text">{contactInfo.location}</p>
+
+        <p className="data-label">
+          <b>Phone:</b>
         </p>
-        <p className="data-display">
+        <p className="data-text">{contactInfo.phone}</p>
+
+        <p className="data-label">
           <b>Email:</b>
+        </p>
+        <p className="data-text">
           <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
         </p>
-        <p className="data-display">
+
+        <p className="data-label">
           <b>Website:</b>
+        </p>
+        <p className="data-text">
           <a href={contactInfo.website}>{contactInfo.website}</a>
         </p>
+
         <button
           className="edit-btn"
           type="button"
@@ -50,6 +61,7 @@ function ContactInfoSection() {
         id="phone-input"
         defaultValue={contactInfo.phone}
         placeholder="(555) 555-5555"
+        autocomplete="tel"
       />
 
       <LabeledTextInput
@@ -57,6 +69,7 @@ function ContactInfoSection() {
         id="email-input"
         defaultValue={contactInfo.email}
         placeholder="awesomedeveloper@domain.com"
+        autocomplete="email"
       />
 
       <LabeledTextInput
@@ -64,6 +77,7 @@ function ContactInfoSection() {
         id="website-input"
         defaultValue={contactInfo.website}
         placeholder="www.myportfolio.com"
+        autocomplete="url"
       />
 
       <button
